@@ -830,7 +830,7 @@ def schemestring(x, d=0, bv_names=None):
             if x.args is None:
                 return name
             elif isinstance(x, BVAddFunctionNode):
-                assert name is 'lambda'
+                assert name == 'lambda'
                 return "(%s (%s) %s)" % (name, x.added_rule.name,
                                          [schemestring(a, d+1, bv_names=bv_names) for a in x.args])
             else:
