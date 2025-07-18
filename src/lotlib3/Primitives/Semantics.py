@@ -28,6 +28,6 @@ def collapse_undef(x):
     """
     if isinstance(x,list): return list(map(collapse_undef, x))
     else:
-        if    x is "undefT": return True
-        elif  x is "undefF": return False
+        if    x == "undefT": return True
+        elif  x == "undefF": return False
         else: x
